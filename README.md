@@ -1,4 +1,4 @@
-# 🏠 Modern Real Estate App + Admin Dashboard — React & Tailwind CSS
+# 🏠 Modern Real Estate App + Admin Dashboard -- React & Tailwind CSS
 
 ## A full-stack ready real estate platform featuring a property listings website for users and a powerful admin dashboard for property managers. Built with React, Tailwind CSS, and React Router, the app delivers a seamless experience for browsing, searching, and managing properties.
 
