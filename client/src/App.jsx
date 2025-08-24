@@ -1,5 +1,31 @@
+import { Route, Routes } from "react-router-dom";
+
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+
+import Home from "./pages/Home";
+import Listing from "./pages/Listing";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <main>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/listing" element={<Listing />} />
+
+        <Route path="/blog" element={<Blog />} />
+
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+      <Footer />
+    </main>
+  );
 };
 
 export default App;

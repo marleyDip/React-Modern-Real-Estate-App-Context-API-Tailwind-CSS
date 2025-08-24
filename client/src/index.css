@@ -44,7 +44,7 @@ html, body {
   }
 
   .btn-secondary  { 
-    @apply  text-[14px] font-[500] bg-secondary px-7 py-3 rounded-full transition-all   cursor-pointer
+    @apply  text-[14px] font-[500] bg-secondary px-7 py-3 rounded-full transition-all cursor-pointer
   }
 
   .max-padd-container {
