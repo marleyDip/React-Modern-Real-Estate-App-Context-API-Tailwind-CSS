@@ -18,6 +18,9 @@ const Header = () => {
       } else {
         setActive(true); // always stay active on other page
       }
+      if (window.scrollY > 10) {
+        setMenuOpened(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -109,7 +112,32 @@ const Header = () => {
           {/* btn, search bar & profile */}
           <div className="flex sm:flex-1 items-center sm:justify-end gap-x-4 sm:gap-x-8">
             {/* search bar */}
-            <div>s</div>
+            <div className="relative hidden xl:flex items-center">
+              <div
+                className={`${
+                  active ? "bg-secondary/10" : "bg-white"
+                } rounded-full shadow-md overflow-hidden ring-1 ring-slate-900/10 transition-all duration-300 ease-in-out ${
+                  showSearch
+                    ? "w-[266px] opacity-100 px-4 py-2"
+                    : "w-11 opacity-0 px-0 py-0"
+                }`}
+              >
+                <input
+                  type="text"
+                  placeholder="Type here..."
+                  className="w-full text-sm outline-none pr-10 placeholder-gray-400"
+                />
+              </div>
+
+              <div
+                onClick={() => setShowSearch((prev) => !prev)}
+                className={`${
+                  active ? "bg-secondary/10" : "bg-primary"
+                } p-[8px] absolute right-0 rounded-full cursor-pointer ring-1 ring-slate-900/10 z-10`}
+              >
+                <img src={assets.search} alt="searchIcon" />
+              </div>
+            </div>
             {/* search bar */}
 
             {/* menu toggle */}
