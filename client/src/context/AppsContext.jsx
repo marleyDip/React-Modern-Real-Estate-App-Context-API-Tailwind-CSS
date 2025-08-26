@@ -14,7 +14,7 @@ export const AppContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    getProperties;
+    getProperties(); // call it
   }, []);
 
   const value = {
