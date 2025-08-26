@@ -48,7 +48,12 @@ import pImg2 from "../assets/pImg2.png";
 import pImg3 from "../assets/pImg3.png";
 import pImg4 from "../assets/pImg4.png";
 import createPrp from "../assets/createPrp.png";
+
+// home
 import about from "../assets/about.png";
+import faq from "../assets/faq.png";
+
+// client
 import client1 from "../assets/client1.jpg";
 import client2 from "../assets/client2.jpg";
 import client3 from "../assets/client3.jpg";
@@ -111,6 +116,7 @@ export const assets = {
   client2,
   client3,
   client4,
+  faq,
 };
 
 export const cities = ["Abu Dhabi", "New York", "Toronto", "Los Angeles"];
