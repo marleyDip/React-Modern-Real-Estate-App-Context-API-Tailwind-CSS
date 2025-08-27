@@ -5,7 +5,7 @@ const Cta = () => {
     <section className="bg-[#fffbee] pt-16 xl:pt-24">
       <div className="max-padd-container mx-2 md:mx-auto p-px">
         <div className="flex flex-col items-center justify-center text-center py-12 md:py-16 rounded-[15px]">
-          <div className="flex items-center justify-center bg-white px-3 py-1.5 shadow-md gap-1 rounded-full text-xs">
+          <div className="flex items-center justify-center bg-white px-3 py-1.5 shadow-md gap-1 rounded-full text-sm font-medium">
             <svg
               width="15"
               height="15"
@@ -22,7 +22,7 @@ const Cta = () => {
                 fill="#5C67FF"
               />
             </svg>
-            <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent font-medium">
+            <span className="bg-gradient-to-r from-purple-600 via-sky-600 to-blue-600 bg-clip-text text-transparent font-medium">
               Trusted by Experts
             </span>
           </div>
