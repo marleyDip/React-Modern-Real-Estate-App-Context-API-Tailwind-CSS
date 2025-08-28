@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Listing from "./pages/Listing";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import PropertyDetails from "./pages/PropertyDetails";
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
 
         <Route path="/listing" element={<Listing />} />
+
+        <Route path="/listing/:id" element={<PropertyDetails />} />
 
         <Route path="/blog" element={<Blog />} />
 
