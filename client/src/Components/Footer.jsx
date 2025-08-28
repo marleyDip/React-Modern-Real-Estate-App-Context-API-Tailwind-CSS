@@ -26,10 +26,10 @@ const Footer = () => {
             </p>
 
             {/* social links */}
-            <div class="flex items-center gap-4 mt-6 text-indigo-500">
+            <div className="flex items-center gap-4 mt-6 text-indigo-500">
               <a
                 href="#"
-                class="hover:-translate-y-0.5 transition-all duration-300"
+                className="hover:-translate-y-0.5 transition-all duration-300"
               >
                 <svg
                   width="24"
@@ -49,7 +49,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                class="hover:-translate-y-0.5 transition-all duration-300"
+                className="hover:-translate-y-0.5 transition-all duration-300"
               >
                 <svg
                   width="24"
@@ -76,7 +76,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                class="hover:-translate-y-0.5 transition-all duration-300"
+                className="hover:-translate-y-0.5 transition-all duration-300"
               >
                 <svg
                   width="24"
@@ -96,7 +96,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                class="hover:-translate-y-0.5 transition-all duration-300"
+                className="hover:-translate-y-0.5 transition-all duration-300"
               >
                 <svg
                   width="24"
@@ -116,7 +116,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                class="hover:-translate-y-0.5 transition-all duration-300"
+                className="hover:-translate-y-0.5 transition-all duration-300"
               >
                 <svg
                   width="24"
