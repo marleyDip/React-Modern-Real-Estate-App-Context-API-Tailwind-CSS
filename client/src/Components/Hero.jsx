@@ -105,7 +105,7 @@ const Hero = () => {
 
             <button
               type="submit"
-              className="flex  items-center justify-center gap-1 rounded-md shadow-md px-6 py-3 bg-gradient-to-tr from-purple-500 to-pink-500 hover:bg-gradient-to-br text-white my-auto max-md:w-full max-md:py-1 lg:hover:translate-y-1.5 duration-200 ease-in cursor-pointer"
+              className="flex items-center justify-center gap-1 rounded-md shadow-md px-6 py-3 bg-gradient-to-tr from-purple-500 to-pink-500 hover:bg-gradient-to-br text-white my-auto max-md:w-full max-md:py-1 lg:hover:translate-y-1.5 duration-200 ease-in cursor-pointer"
             >
               <img
                 src={assets.search}
