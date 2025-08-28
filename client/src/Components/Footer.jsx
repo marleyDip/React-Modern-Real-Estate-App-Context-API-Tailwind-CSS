@@ -47,6 +47,7 @@ const Footer = () => {
                   />
                 </svg>
               </a>
+
               <a
                 href="#"
                 className="hover:-translate-y-0.5 transition-all duration-300"
@@ -74,6 +75,7 @@ const Footer = () => {
                   />
                 </svg>
               </a>
+
               <a
                 href="#"
                 className="hover:-translate-y-0.5 transition-all duration-300"
@@ -94,6 +96,7 @@ const Footer = () => {
                   />
                 </svg>
               </a>
+
               <a
                 href="#"
                 className="hover:-translate-y-0.5 transition-all duration-300"
@@ -114,6 +117,7 @@ const Footer = () => {
                   />
                 </svg>
               </a>
+
               <a
                 href="#"
                 className="hover:-translate-y-0.5 transition-all duration-300"
