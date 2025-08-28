@@ -251,14 +251,15 @@ const Footer = () => {
           {/* support */}
 
           {/* subscribe */}
-          <div className="max-w-80">
+          {/* <div className="max-w-80"> */}
+          <div className="">
             <p className="h4 text-black/80">STAY UPDATED</p>
 
             <p className="mt-3 text-sm font-semibold">
               Subscribe to our newsletter for inspiration and special offers.
             </p>
 
-            <div className="flex items-center max-w-md w-full mt-6 pl-4 gap-2 bg-white border border-gray-500/30 h-[46px] rounded-full shadow-xl overflow-hidden">
+            {/* <div className="flex items-center max-w-md w-full mt-6 pl-4 gap-2 bg-white border border-gray-500/30 h-[46px] rounded-full shadow-xl overflow-hidden">
               <input
                 type="text"
                 className="w-full h-full outline-none text-sm text-gray-500"
@@ -266,6 +267,17 @@ const Footer = () => {
               />
               <button className="btn-dark font-medium !px-3.5 py-2 mt-0.5">
                 Subscribe
+              </button>
+            </div> */}
+
+            <div class="flex items-center justify-center mt-4 border border-slate-600 focus-within:outline focus-within:outline-indigo-600 text-sm rounded-full shadow-md h-14 max-w-md w-full bg-white/50">
+              <input
+                type="text"
+                class="bg-transparent placeholder-gray-600 outline-none rounded-full px-4 h-full flex-1"
+                placeholder="Enter your email address"
+              />
+              <button class="bg-indigo-600 hover:bg-indigo-800 text-white rounded-full h-11 mr-1 px-8 flex items-center justify-center cursor-pointer">
+                Subscribe now
               </button>
             </div>
           </div>
