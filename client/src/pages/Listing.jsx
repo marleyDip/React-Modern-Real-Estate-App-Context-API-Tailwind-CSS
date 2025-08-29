@@ -1,5 +1,7 @@
 import Item from "../Components/Item";
 import { useAppContext } from "../context/AppsContext";
+import Lottie from "lottie-react";
+import empty from "../assets/empty.json";
 
 const Listing = () => {
   const { properties, categoryOnlyData } = useAppContext();
@@ -57,7 +59,7 @@ const Listing = () => {
               >
                 <input type="checkbox" className="hidden peer" />
                 <span className="w-4 h-4 border border-blue-600 rounded-full relative flex items-center justify-center peer-checked:after:content-[''] peer-checked:after:w-2 peer-checked:after:h-2 peer-checked:after:bg-blue-600 peer-checked:border-blue-600 peer-checked:after:rounded-full peer-checked:after:absolute"></span>
-                <span className="text-gray-700 select-none">৳{type}</span>
+                <span className="text-gray-700 select-none">{type}</span>
               </label>
             ))}
           </div>
@@ -74,8 +76,11 @@ const Listing = () => {
               ))}
             </div>
           ) : (
-            <div className="flex items-center justify-center text-center text-gray-500 mt-20 h-full">
-              No Matches Found
+            <div className="flex items-center justify-center w-full mt-10 ml-20">
+              <Lottie
+                animationData={empty}
+                className="w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px]"
+              />
             </div>
           )}
         </div>
