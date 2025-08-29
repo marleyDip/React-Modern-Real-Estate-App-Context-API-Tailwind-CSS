@@ -1,12 +1,14 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { dummyProperties } from "../assets/data";
+import { useUser } from "@clerk/clerk-react";
 
 const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [properties, setProperties] = useState([]);
 
+  const { user } = useUser();
   const currency = import.meta.env.VITE_CURRENCY;
   const navigate = useNavigate();
 
@@ -34,6 +36,7 @@ export const AppContextProvider = ({ children }) => {
     properties,
     categoryOnlyData,
     currency,
+    user,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
