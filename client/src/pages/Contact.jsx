@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="bg-gradient-to-r from-[#fffbee] to-white py-28">
+    <div className="bg-gradient-to-r from-[#fffbee] to-white py-16 xl:py-28">
       <form className="flex flex-col items-center text-sm text-slate-800">
         <p className="text-xs bg-black/80 text-white font-medium px-3 py-1 rounded-full">
           Contact Us

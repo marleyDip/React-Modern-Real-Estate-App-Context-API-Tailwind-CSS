@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { assets } from "../assets/data";
 import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
-import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
+import { useClerk, UserButton } from "@clerk/clerk-react";
 import { useAppContext } from "../context/AppsContext";
 
 const Header = () => {
@@ -11,9 +11,8 @@ const Header = () => {
   const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
 
-  const { user } = useUser();
   const { openSignIn } = useClerk();
-  const { navigate } = useAppContext();
+  const { navigate, user } = useAppContext();
 
   const BookingIcon = () => (
     <svg
