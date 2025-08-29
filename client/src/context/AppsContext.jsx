@@ -7,6 +7,7 @@ const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const [properties, setProperties] = useState([]);
 
+  const currency = import.meta.env.VITE_CURRENCY;
   const navigate = useNavigate();
 
   const getProperties = () => {
@@ -32,6 +33,7 @@ export const AppContextProvider = ({ children }) => {
     navigate,
     properties,
     categoryOnlyData,
+    currency,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

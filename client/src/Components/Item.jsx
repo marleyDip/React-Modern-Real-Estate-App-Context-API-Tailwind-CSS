@@ -1,15 +1,14 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { assets } from "../assets/data";
+import { useAppContext } from "../context/AppsContext";
 
 const Item = ({ property }) => {
+  const { currency } = useAppContext();
+
   return (
-    // <Link
-    //   to={"/listing" + property._id}
-    //   className="group block rounded-lg bg-white ring-1 ring-slate-900/5 shadow-md hover:shadow-lg"
-    // >
+    // <Link to={`/listing/${property._id}`}>
     <Link
-      to={`/listing/${property._id}`}
+      to={"/listing/" + property._id}
       className="group block rounded-lg bg-white ring-1 ring-slate-900/5 shadow-md hover:shadow-lg"
     >
       {/* image */}
@@ -49,8 +48,9 @@ const Item = ({ property }) => {
           <h5 className="bold-16 my-2">{property.propertyType}</h5>
 
           <div className="bold-15 text-amber-600">
-            ৳{property.price.sale} | ৳{property.price.rent}.00{" "}
-            <span className="text-sm">/night</span>
+            {currency}
+            {property.price.sale} | {currency}
+            {property.price.rent}.00 <span className="text-sm">/night</span>
           </div>
         </div>
 

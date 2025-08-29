@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppContext } from "../context/AppsContext";
 import { useParams } from "react-router-dom";
 import PropertyImages from "../Components/PropertyImages";
@@ -7,7 +7,7 @@ import { assets } from "../assets/data";
 const PropertyDetails = () => {
   const [property, setProperty] = useState(null);
 
-  const { properties } = useAppContext();
+  const { currency, properties } = useAppContext();
   const { id } = useParams();
 
   useEffect(() => {
@@ -35,7 +35,9 @@ const PropertyDetails = () => {
               <div className="flex flex-col justify-between sm:flex-row sm:items-end mt-3">
                 <h3 className="h3">{property.title}</h3>
                 <div className="bold-18">
-                  ৳{property.price.sale} | ৳{property.price.rent}.00/night
+                  {currency}
+                  {property.price.sale} | {currency}
+                  {property.price.rent}.00/night
                 </div>
               </div>
 
