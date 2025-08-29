@@ -17,7 +17,7 @@ const Listing = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-[#fffbee] to-white py-28">
+    <div className="bg-gradient-to-r from-[#fffbee] to-white py-16 pt-28">
       <div className="max-padd-container flex flex-col sm:flex-row gap-8 mb-16">
         {/* left side - filers */}
         <div className="bg-secondary/10 ring-1 ring-slate-900/5 p-4 sm:min-w-60 sm:h-[600px] rounded-xl shadow-md">
@@ -68,7 +68,7 @@ const Listing = () => {
         {/* left side - filers */}
 
         {/* right side - product */}
-        <div className="min-h-[97vh] overflow-y-auto px-4 py-6 rounded-xl">
+        <div className="min-h-[97vh] overflow-y-auto px-4 py-2 rounded-xl">
           {properties.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
               {properties.map((property) => (

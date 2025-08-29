@@ -17,7 +17,7 @@ const PropertyDetails = () => {
 
   return (
     property && (
-      <div className="bg-gradient-to-r from-[#fffbee] to-white py-28">
+      <div className="bg-gradient-to-r from-[#fffbee] to-white  py-16 pt-28">
         <div className="max-padd-container">
           {/* image */}
           <PropertyImages property={property} />
