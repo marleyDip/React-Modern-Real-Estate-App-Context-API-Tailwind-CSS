@@ -8,6 +8,7 @@ const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const [properties, setProperties] = useState([]);
   const [showAgencyReg, setShowAgencyReg] = useState(false);
+  const [isOwner, setIsOwner] = useState(true);
 
   const { user } = useUser();
   const currency = import.meta.env.VITE_CURRENCY;
@@ -40,6 +41,8 @@ export const AppContextProvider = ({ children }) => {
     user,
     showAgencyReg,
     setShowAgencyReg,
+    isOwner,
+    setIsOwner,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

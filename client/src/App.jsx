@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -18,13 +18,15 @@ import ListProperty from "./pages/owner/ListProperty";
 
 const App = () => {
   const { showAgencyReg } = useAppContext();
+  const location = useLocation();
+  const isOwnerPath = location.pathname.includes("owner");
 
   return (
     <main>
-      <Header />
+      {!isOwnerPath && <Header />}
 
       {/* This only shows AgencyReg when showAgencyReg === false */}
-      {!showAgencyReg && <AgencyReg />}
+      {!isOwnerPath && !showAgencyReg && <AgencyReg />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -40,6 +42,9 @@ const App = () => {
         <Route path="/my-bookings" element={<MyBookings />} />
 
         <Route path="/owner" element={<Sidebar />}>
+          {/* Child routes will be rendered inside <Outlet /> */}
+
+          {/* Default child route */}
           <Route index element={<Dashboard />} />
 
           <Route path="/owner/add-property" element={<AddProperty />} />
@@ -48,7 +53,7 @@ const App = () => {
         </Route>
       </Routes>
 
-      <Footer />
+      {!isOwnerPath && <Footer />}
     </main>
   );
 };
