@@ -11,6 +11,10 @@ import PropertyDetails from "./pages/PropertyDetails";
 import MyBookings from "./pages/MyBookings";
 import AgencyReg from "./Components/AgencyReg";
 import { useAppContext } from "./context/AppsContext";
+import Sidebar from "./Components/owner/Sidebar";
+import Dashboard from "./pages/owner/Dashboard";
+import AddProperty from "./pages/owner/AddProperty";
+import ListProperty from "./pages/owner/ListProperty";
 
 const App = () => {
   const { showAgencyReg } = useAppContext();
@@ -34,6 +38,14 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/my-bookings" element={<MyBookings />} />
+
+        <Route path="/owner" element={<Sidebar />}>
+          <Route index element={<Dashboard />} />
+
+          <Route path="/owner/add-property" element={<AddProperty />} />
+
+          <Route path="/owner/list-property" element={<ListProperty />} />
+        </Route>
       </Routes>
 
       <Footer />
