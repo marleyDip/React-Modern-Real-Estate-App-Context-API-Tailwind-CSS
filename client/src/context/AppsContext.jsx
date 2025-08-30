@@ -7,6 +7,7 @@ const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [properties, setProperties] = useState([]);
+  const [showAgencyReg, setShowAgencyReg] = useState(false);
 
   const { user } = useUser();
   const currency = import.meta.env.VITE_CURRENCY;
@@ -37,6 +38,8 @@ export const AppContextProvider = ({ children }) => {
     categoryOnlyData,
     currency,
     user,
+    showAgencyReg,
+    setShowAgencyReg,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
