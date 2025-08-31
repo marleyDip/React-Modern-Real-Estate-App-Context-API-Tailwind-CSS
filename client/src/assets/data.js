@@ -327,7 +327,7 @@ export const dummyBookingsData = [
     property: dummyProperties[1],
     agency: dummyAgencyData,
     checkInDate: "2025-04-30T00:00:00.000Z",
-    checkOutDate: "2025-05-01T00:00:00.000Z",
+    checkOutDate: "2025-05-03T00:00:00.000Z",
     totalPrice: 299,
     guests: 4,
     status: "pending",
