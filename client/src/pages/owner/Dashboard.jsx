@@ -85,16 +85,16 @@ const Dashboard = () => {
           {dashboardData.bookings.map((booking, index) => (
             <div
               key={index}
-              className="flex items-center justify-between flex-wrap gap-2 sm:grid grid-cols-[2fr_2fr_1fr_1fr] lg:grid-cols-[0.5fr_2fr_2fr_1fr_1fr] px-6 py-3 bg-secondary/5 border-1 border-slate-900/15 shadow-sm"
+              className="flex items-center justify-between flex-wrap gap-2 sm:grid grid-cols-[2fr_2fr_1fr_1fr] lg:grid-cols-[0.5fr_2fr_2fr_1fr_1fr] px-6 py-3 bg-secondary/5 border-1 border-slate-900/15 shadow"
             >
               <div className="hidden lg:block">{index + 1}</div>
 
               <div className="flexStart gap-x-2 max-w-64">
-                <div className="overflow-hidden rounded-lg">
+                <div className="overflow-hidden rounded-lg shadow-md">
                   <img
                     src={booking.property.images[0]}
                     alt={booking.property.title}
-                    className="w-16 rounded-lg"
+                    className="w-16 h-10"
                   />
                 </div>
 
