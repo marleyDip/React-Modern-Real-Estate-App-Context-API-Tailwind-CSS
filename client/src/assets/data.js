@@ -68,6 +68,7 @@ import blog5 from "../assets/blogs/blog5.jpg";
 import blog6 from "../assets/blogs/blog6.jpg";
 import blog7 from "../assets/blogs/blog7.jpg";
 import blog8 from "../assets/blogs/blog8.jpg";
+import uploadIcon from "../assets/upload_icon.png";
 
 export const assets = {
   logoImg,
@@ -117,6 +118,7 @@ export const assets = {
   client3,
   client4,
   faq,
+  uploadIcon,
 };
 
 export const cities = ["Abu Dhabi", "New York", "Toronto", "Los Angeles"];
