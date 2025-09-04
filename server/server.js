@@ -1,9 +1,17 @@
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
+import connectDB from "./config/mongodb.js";
+import { clerkMiddleware } from "@clerk/express";
+
+await connectDB(); // Establish Connection to the database
 
 const app = express(); // Initialize Express Application
 app.use(cors()); // Enable Cross-Origin Resource Sharing for all routes
+
+// Middleware Setup
+app.use(express.json()); // Middleware to parse JSON request
+app.use(clerkMiddleware());
 
 //Route Endpoint to check server / API status
 app.get("/", (req, res) => {
