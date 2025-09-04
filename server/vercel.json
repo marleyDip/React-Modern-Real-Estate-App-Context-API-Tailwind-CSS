@@ -13,8 +13,8 @@
     ],
     "routes": [
         {
-            "source": "/(.*)",
-            "destination": "/"
+            "src": "/(.*)",
+            "dest": "server.js"
         }
     ]
 }
