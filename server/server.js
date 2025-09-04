@@ -3,6 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import connectDB from "./config/mongodb.js";
 import { clerkMiddleware } from "@clerk/express";
+import clerkWebhooks from "./controllers/clerkWebhooks.js";
 
 await connectDB(); // Establish Connection to the database
 
@@ -12,6 +13,9 @@ app.use(cors()); // Enable Cross-Origin Resource Sharing for all routes
 // Middleware Setup
 app.use(express.json()); // Middleware to parse JSON request
 app.use(clerkMiddleware());
+
+// API to listen clerk webhooks
+app.use("/api/clerk", clerkWebhooks);
 
 //Route Endpoint to check server / API status
 app.get("/", (req, res) => {
