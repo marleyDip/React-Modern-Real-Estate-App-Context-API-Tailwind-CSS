@@ -16,12 +16,18 @@ const clerkWebhooks = async (req, res) => {
     };
 
     // verifying headers
-    await whook.verify(JSON.stringify(req.body), headers);
+    //await whook.verify(JSON.stringify(req.body), headers);
 
     // getting data from request body
-    const { data, type } = req.body;
+    //const { data, type } = req.body;
 
     //console.log("📩 Clerk Webhook Payload:", JSON.stringify(data, null, 2));
+
+    await whook.verify(req.body, headers);
+
+    const { type, data } = JSON.parse(req.body.toString());
+
+    console.log("📩 Webhook payload:", data);
 
     //switch case for different event types
     switch (type) {
