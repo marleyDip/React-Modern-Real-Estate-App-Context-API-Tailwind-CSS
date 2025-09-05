@@ -15,13 +15,13 @@ const clerkWebhooks = async (req, res) => {
       "svix-signature": req.headers["svix-signature"],
     };
 
-    console.log("📩 Clerk Webhook Payload:", JSON.stringify(data, null, 2));
-
     // verifying headers
     await whook.verify(JSON.stringify(req.body), headers);
 
     // getting data from request body
     const { data, type } = req.body;
+
+    //console.log("📩 Clerk Webhook Payload:", JSON.stringify(data, null, 2));
 
     //switch case for different event types
     switch (type) {
