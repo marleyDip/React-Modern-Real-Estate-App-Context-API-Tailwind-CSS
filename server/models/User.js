@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema(
 
     username: { type: String, required: true },
 
-    email: { type: String, required: true },
+    email: { type: String, default: null },
 
     image: { type: String, default: "" }, // safer if user has no profile image
 
