@@ -19,7 +19,7 @@ const clerkWebhooks = async (req, res) => {
     await whook.verify(JSON.stringify(req.body), headers);
 
     // getting data from request body
-    const { type, data } = req.body;
+    const { data, type } = req.body;
 
     //switch case for different event types
     switch (type) {
@@ -84,4 +84,29 @@ export default clerkWebhooks;
   ]
 }
  
+*/
+
+/*  const userData = {
+      _id: data.id,
+      email: data?.email_address?.[0]?.email_address || null,
+      username: `${data?.first_name ?? ""} ${data?.last_name ?? ""}`.trim(),
+      image: data?.image_url || "",
+    };
+
+    switch (type) {
+      case "user.created":
+        await User.findByIdAndUpdate(data.id, userData, { upsert: true, new: true });
+        break;
+
+      case "user.updated":
+        await User.findByIdAndUpdate(data.id, userData, { new: true });
+        break;
+
+      case "user.deleted":
+        await User.findByIdAndDelete(data.id);
+        break;
+
+      default:
+        break;
+    } 
 */

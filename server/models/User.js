@@ -2,13 +2,13 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
   {
-    _id: { type: String, required: true },
+    _id: { type: String, required: true }, // Clerk user ID
 
     username: { type: String, required: true },
 
     email: { type: String, required: true },
 
-    image: { type: String, required: true },
+    image: { type: String, default: "" }, // safer if user has no profile image
 
     role: { type: String, enum: ["user", "agencyOwner"], default: "user" },
 
@@ -17,6 +17,8 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const user = mongoose.model("user", userSchema);
+const User = mongoose.model("User", userSchema);
 
-export default user;
+export default User;
+
+// recentSearchedCities: { type: [String], default: [] },
