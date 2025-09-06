@@ -9,9 +9,7 @@ const clerkWebhooks = async (req, res) => {
     // get headers
     const headers = {
       "svix-id": req.headers["svix-id"],
-
       "svix-timestamp": req.headers["svix-timestamp"],
-
       "svix-signature": req.headers["svix-signature"],
     };
 
@@ -21,7 +19,7 @@ const clerkWebhooks = async (req, res) => {
     // getting data from request body
     const { data, type } = req.body;
 
-    console.log("📩 Clerk Webhook Payload:", JSON.stringify(data, null, 2));
+    //console.log("Clerk Webhook Payload:", JSON.stringify(data, null, 2));
 
     //switch case for different event types
     switch (type) {
