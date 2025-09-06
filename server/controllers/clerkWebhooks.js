@@ -28,12 +28,12 @@ const clerkWebhooks = async (req, res) => {
       case "user.created": {
         const userData = {
           _id: data.id,
-          email: data?.email_address?.[0]?.email_address || null,
+          email: data.email_addresses[0].email_address,
           username: data.first_name + " " + data.last_name,
           image: data.image_url,
 
-          // data.email_address[0] → gets the first email object in that array.
-          // data.email_address[0].email_address → extracts the actual email string.
+          // data.email_addresses[0] → gets the first email object in that array.
+          // data.email_addresses[0].email_address → extracts the actual email string.
         };
         await User.create(userData);
         break;
@@ -42,7 +42,7 @@ const clerkWebhooks = async (req, res) => {
       case "user.updated": {
         const userData = {
           _id: data.id,
-          email: data.email_address[0].email_address,
+          email: data.email_addresses[0].email_address,
           username: data.first_name + " " + data.last_name,
           image: data.image_url,
         };
@@ -74,7 +74,7 @@ export default clerkWebhooks;
   "first_name": "John",
   "last_name": "Doe",
   "image_url": "https://example.com/avatar.png",
-  "email_address": [
+  "email_addresses": [
     {
       "id": "idn_abc123",
       "object": "email_address",

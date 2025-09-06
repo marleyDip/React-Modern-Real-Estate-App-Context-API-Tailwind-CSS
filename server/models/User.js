@@ -6,9 +6,9 @@ const userSchema = new mongoose.Schema(
 
     username: { type: String, required: true },
 
-    email: { type: String, default: null },
+    email: { type: String, required: true },
 
-    image: { type: String, default: "" }, // safer if user has no profile image
+    image: { type: String, required: true }, // safer if user has no profile image
 
     role: { type: String, enum: ["user", "agencyOwner"], default: "user" },
 
